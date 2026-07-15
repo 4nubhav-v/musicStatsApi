@@ -50,10 +50,10 @@ export default function Music() {
     getMusicImage();
   }, [music]);
   return (
-      <div className="bg-red-600 size-128 flex justify-center items-center flex-col rounded-2xl">
+      <div className="bg-zinc-50 dark:bg-zinc-800 size-96 flex justify-center items-center flex-col rounded-2xl">
         {img && (
           <Image
-            className="rounded-sm"
+            className="rounded-sm my-4"
             src={img}
             alt={music.artist}
             width={250}
@@ -62,10 +62,10 @@ export default function Music() {
             priority
           />
         )}
-        <h1 className="text-center font-semibold tracking-tight ">
+        <h1 className="text-center font-semibold text-2xl tracking-tight text-zinc-800 dark:text-zinc-200">
           {music.track}
         </h1>
-        <h1 className="text-center">{music.artist} </h1>
+        <h1 className="text-center mb-4 text-zinc-800 dark:text-zinc-200">{music.artist} </h1>
       </div>
   );
 }
